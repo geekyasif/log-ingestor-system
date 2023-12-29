@@ -29,7 +29,7 @@ class QueryController {
         {
           $match: {
             level: level || { $exists: true, $ne: null },
-            message: { $exists: true, $ne: null },
+            message: message || { $exists: true, $ne: null },
             resourceId: resourceId || { $exists: true, $ne: null },
             timestamp: timestamp || { $exists: true, $ne: null },
             traceId: traceId || { $exists: true, $ne: null },
